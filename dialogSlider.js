@@ -1,7 +1,6 @@
 /*
  *requires:
  *  utils/uuidv4
- *  utils/htmlToElement
  */
 
 function dialogSlider(el_list){
