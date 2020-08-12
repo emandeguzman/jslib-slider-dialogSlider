@@ -1,6 +1,9 @@
 .dialog_slider {
-    $viewport_width: 70vw;
-    $viewport_height: 50vh;
+    $small  : 576px;
+    $medium : 768px;
+    $large  : 992px;
+    $xlarge : 1200px;
+    
     $background_opacity: .5;
     $image_fit: cover;
     
@@ -15,9 +18,11 @@
     background: rgba(0, 0, 0, $background_opacity);
     
     .viewport {
+        $viewport_height: 65%;
         position: relative;
-        width: $viewport_width;
-        height: $viewport_height;
+        width: calc(100vw - 40px);
+        height: 0;
+        padding-bottom: 65%;
         margin-bottom: calc((100vh - #{$viewport_height}) * .3);
         border: 1px solid #000;
         overflow: hidden;
@@ -152,4 +157,16 @@
         }
     }
     //arrows - end
+
+
+    @media (min-width: $medium) {
+        .viewport {
+            width: 80vw;
+        }
+    }
+    @media (min-width: $large) {
+        .viewport {
+            width: 53vw;
+        }
+    }
 }
